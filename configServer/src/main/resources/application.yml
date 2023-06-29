@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8888}
+
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Maximiliano-Escuder/parcialBack
+          default-label: master
+          force-pull: true
+          search-paths: configData
