@@ -1,6 +1,7 @@
 package com.dh.catalog.model;
 
 import com.dh.catalog.client.MovieServiceClient;
+import com.dh.catalog.model.movie.Movie;
 import com.dh.catalog.model.serie.Serie;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,9 +11,9 @@ import java.util.List;
 
 public class CatalogResponse {
     private List<Serie> series = new ArrayList<>();
-    private List<MovieServiceClient.MovieDto> movies = new ArrayList<>();
+    private List<Movie> movies = new ArrayList<>();
 
-    public CatalogResponse(List<Serie> series, List<MovieServiceClient.MovieDto> movies) {
+    public CatalogResponse(List<Serie> series, List<Movie> movies) {
         this.movies = movies;
         this.series = series;
     }
@@ -28,11 +29,11 @@ public class CatalogResponse {
         this.series = series;
     }
 
-    public List<MovieServiceClient.MovieDto> getMovies() {
+    public List<Movie> getMovies() {
         return movies;
     }
 
-    public void setMovies(List<MovieServiceClient.MovieDto> movies) {
+    public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }
 
