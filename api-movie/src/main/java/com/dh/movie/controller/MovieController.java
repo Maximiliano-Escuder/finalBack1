@@ -29,6 +29,7 @@ public class MovieController {
     @PostMapping("/save")
     ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
         //Se crea el evento de movie creada
+        System.out.println("Movie guardada" + movie.getName());
         movieCreadaEventProducer.publishMovieCreadaEvent(movie);
         return ResponseEntity.ok().body(movieService.save(movie));
     }
