@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: api-movie
+  zipkin:
+    baseUrl: http://localhost:9411/
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/parcialback
